@@ -1,10 +1,14 @@
 import "./App.css";
+// import { Private } from "./components/auth/Private";
+// import { Profile } from "./components/auth/Profile";
+import { List } from "./components/generics/List";
 // import { Button } from "./components/Button";
 // import { Container } from "./components/Container";
 // import { Box } from "./components/context/Box";
 // import { ThemeContextProvider } from "./components/context/ThemeContextProvider";
-import { User } from "./components/context/User";
-import { UserContextProvider } from "./components/context/UserContextProvider";
+// import { User } from "./components/context/User";
+// import { UserContextProvider } from "./components/context/UserContextProvider";
+// import { DomRef } from "./components/ref/DomRef";
 // import { Input } from "./components/Input";
 // import { Greet } from "./components/Greet";
 // import { Heading } from "./components/Heading";
@@ -56,9 +60,38 @@ function App() {
         <Box />
       </ThemeContextProvider> */}
 
-      <UserContextProvider>
+      {/* <UserContextProvider>
         <User />
-      </UserContextProvider>
+      </UserContextProvider> */}
+
+      {/* ------------Ref in typescript */}
+      {/* <DomRef /> */}
+
+      {/* <Private isLoggedIn={true} component={Profile} /> */}
+
+      {/* ------------Generics  */}
+      <List
+        items={["Batman", "Superman", "Wonder Woman"]}
+        onClick={(item) => console.log(item)}
+      />
+      <List items={[1, 2, 3]} onClick={(item) => console.log(item)} />
+      <List
+        items={[
+          {
+            first: "Bruce",
+            last: "Wayne",
+          },
+          {
+            first: "Clark",
+            last: "Kent",
+          },
+          {
+            first: "Princess",
+            last: "Diana",
+          },
+        ]}
+        onClick={(item) => console.log(item)}
+      />
     </div>
   );
 }
