@@ -1,7 +1,13 @@
 import "./App.css";
+import { Text } from "./components/polymorphic/Text";
+// import { CustomButton } from "./components/html/CustomButton";
+// import { CustomComponent } from "./components/html/CustomComponent";
+
 // import { Private } from "./components/auth/Private";
 // import { Profile } from "./components/auth/Profile";
-import { List } from "./components/generics/List";
+// import { List } from "./components/generics/List";
+// import { RandomNumber } from "./components/restriction/RandomNumber";
+// import { Toast } from "./components/templateliterals/Toast";
 // import { Button } from "./components/Button";
 // import { Container } from "./components/Container";
 // import { Box } from "./components/context/Box";
@@ -70,7 +76,7 @@ function App() {
       {/* <Private isLoggedIn={true} component={Profile} /> */}
 
       {/* ------------Generics  */}
-      <List
+      {/* <List
         items={["Batman", "Superman", "Wonder Woman"]}
         onClick={(item) => console.log(item)}
       />
@@ -91,8 +97,38 @@ function App() {
           },
         ]}
         onClick={(item) => console.log(item)}
-      />
-    </div>
+      /> */}
+
+
+
+      {/* ----------restirctions  */}
+      {/* <RandomNumber value={10} isPositive={true} /> */}
+
+
+      {/* ------template literals  */}
+      {/* <Toast position="center" /> */}
+
+
+      {/* ---------------html element  */}
+      {/* <CustomButton variant='primary' onClick={() => console.log('Clicked')}>
+        Primary Button
+      </CustomButton> */}
+
+      {/* ------------ Extracting props types from a existing component  */}
+      {/* <CustomComponent isLoggedIn name="sudeep" /> */}
+
+
+      {/* ----polymorphic component in typescript  */}
+      <Text as='h1' size='lg'>
+        Heading
+      </Text>
+      <Text as='p' size='md' >
+        Paragraph
+      </Text >
+      <Text as='label' htmlFor="someId" size='sm'>
+        Label
+      </Text>
+    </div >
   );
 }
 
